@@ -15,17 +15,16 @@ public class FXApp extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        Button button = new Button("Draw some lines");
-
+        Button button = new Button("Draw a graph");
         Polyline polyline = new Polyline();
 
         button.setOnMouseClicked(new EventHandler<MouseEvent>() {
             @Override
             public void handle(MouseEvent mouseEvent) {
-                for (int i = 0; i < 10; i++) {
-                    polyline.getPoints().addAll(Math.random() * 640, Math.random() * 480);
+                for (int i = 0; i < 40; i++) {
+                    polyline.getPoints().addAll(i*5.0 , Math.random() * 480);
                     try {
-                        Thread.sleep(1000);
+                        Thread.sleep(250);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
