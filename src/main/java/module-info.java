@@ -6,5 +6,7 @@ module oop {
     opens control to javafx.fxml;
 
     exports control;
+    exports accounting;
+    opens accounting to javafx.fxml;
 
 }
